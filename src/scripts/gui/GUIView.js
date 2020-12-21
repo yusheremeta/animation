@@ -27,17 +27,6 @@ export default class GUIView {
 
 	initControlKit() {
 		this.controlKit = new ControlKit();
-		this.controlKit.addPanel({ width: 300, enable: false })
-
-		.addGroup({label: 'Touch', enable: true })
-		.addCanvas({ label: 'trail', height: 64 })
-		.addSlider(this, 'touchRadius', 'rangeRadius', { label: 'radius', onChange: this.onTouchChange.bind(this) })
-		
-		.addGroup({label: 'Particles', enable: true })
-		// .addCheckbox(this, 'particlesHitArea', { label: 'hit area', onChange: this.onParticlesChange.bind(this) })
-		.addSlider(this, 'particlesRandom', 'rangeRandom', { label: 'random', onChange: this.onParticlesChange.bind(this) })
-		.addSlider(this, 'particlesDepth', 'rangeDepth', { label: 'depth', onChange: this.onParticlesChange.bind(this) })
-		.addSlider(this, 'particlesSize', 'rangeSize', { label: 'size', onChange: this.onParticlesChange.bind(this) })
 
 		// store reference to canvas
 		const component = this.controlKit.getComponentBy({ label: 'trail' });

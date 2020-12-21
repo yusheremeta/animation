@@ -17,7 +17,7 @@ export default class App {
 
 	initWebGL() {
 		this.webgl = new WebGLView(this);
-		document.querySelector('.container').appendChild(this.webgl.renderer.domElement);
+		document.querySelector('.animationContainer').appendChild(this.webgl.renderer.domElement);
 	}
 
 	initGUI() {
