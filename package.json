@@ -15,8 +15,14 @@
   "license": "MIT",
   "sideEffects": false,
   "scripts": {
-    "build": "webpack -p --config config/prod.js",
-    "start": "webpack-dev-server --config config/dev.js"
+    "buildProject": "webpack -p --config config/prod.js",
+    "devStart": "webpack-dev-server --config config/dev.js",
+    "dev": "react-scripts start",
+    "start": " serve -s build&react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "@brunoimbrizi/controlkit": "^0.1.93",
