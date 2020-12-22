@@ -24,9 +24,6 @@ export default class TouchTexture {
 
 		this.texture = new THREE.Texture(this.canvas);
 
-		console.log('texture', this.texture);
-		console.log('this.ctx', this.ctx)
-
 		this.canvas.id = 'touchTexture';
 		this.canvas.style.width = this.canvas.style.height = `${this.canvas.width}px`;
 	}
